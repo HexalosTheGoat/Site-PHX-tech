@@ -7,11 +7,9 @@
 
 body {
     font-family: 'Rajdhani', 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
-    background-color: #ffffff;
-    color: #111111;
+    background-color: #f0f0f0;
+    color: #333;
     line-height: 1.6;
-    -webkit-font-smoothing: antialiased;
-    -moz-osx-font-smoothing: grayscale;
 }
 
 html {
@@ -23,130 +21,110 @@ html {
     display: flex;
     justify-content: space-between;
     align-items: center;
-    background-color: #ffffff;
+    background-color: rgba(255, 255, 255, 0.95);
+    backdrop-filter: blur(5px);
     padding: 1rem 2rem;
-    box-shadow: 0 4px 12px rgba(0, 0, 0, 0.07);
+    box-shadow: 0 2px 8px rgba(0, 0, 0, 0.05);
     position: sticky;
     top: 0;
     z-index: 1000;
-    transition: background-color 0.3s ease;
 }
 
 .logo {
     display: flex;
     align-items: center;
-    gap: 12px;
-    font-size: 1.6rem;
-    font-weight: 700;
-    color: #ff6600;
-    cursor: pointer;
-    user-select: none;
-    transition: color 0.3s ease;
+    gap: 10px;
+    font-size: 1.5rem;
+    font-weight: bold;
+    color: #ff7c33;
 }
 
 .logo img {
-    width: 45px;
-    height: 45px;
-    transition: transform 0.3s ease;
-}
-
-.logo:hover {
-    color: #e65c00;
-}
-
-.logo:hover img {
-    transform: rotate(15deg) scale(1.1);
+    width: 40px;
+    height: 40px;
 }
 
 .nav-links {
     list-style: none;
     display: flex;
-    gap: 2rem;
+    gap: 1.5rem;
 }
 
 .nav-links a {
-    color: #111111;
+    color: #333;
     text-decoration: none;
-    font-weight: 600;
+    font-weight: 500;
     position: relative;
-    padding-bottom: 4px;
-    transition: color 0.3s ease;
-    outline-offset: 3px;
+    transition: color 0.3s;
 }
 
 .nav-links a::after {
     content: '';
     height: 2px;
-    background: #ff6600;
+    background: #ff7c33;
     width: 0%;
     position: absolute;
     left: 0;
-    bottom: 0;
-    transition: width 0.3s ease;
-    border-radius: 2px;
+    bottom: -4px;
+    transition: 0.3s;
 }
 
-.nav-links a:hover,
-.nav-links a:focus-visible {
-    color: #ff6600;
+.nav-links a:hover {
+    color: #e96b24;
 }
 
-.nav-links a:hover::after,
-.nav-links a:focus-visible::after {
+.nav-links a:hover::after {
     width: 100%;
 }
 
 /* --- Hero Section --- */
 .hero {
-    background: linear-gradient(rgba(255, 255, 255, 0.95), rgba(255, 255, 255, 0.95)),
-    url('assets/background.jpg') center/cover no-repeat;
+    background:
+            linear-gradient(rgba(0, 0, 0, 0.55), rgba(0, 0, 0, 0.55)),
+            url('assets/wallpaperkeyboardorange.jpg') center/cover no-repeat;
     height: 100vh;
     display: flex;
     justify-content: center;
     align-items: center;
     text-align: center;
     padding: 0 2rem;
+    position: relative;
+}
+
+.hero-content {
+    background-color: rgba(0, 0, 0, 0.4);
+    padding: 1.5rem 3rem;
+    border-radius: 10px;
 }
 
 .hero-content h1 {
-    font-size: clamp(2.5rem, 5vw, 3.5rem);
-    color: #ff6600;
-    margin-bottom: 1.2rem;
-    font-family: 'Rajdhani', sans-serif;
-    text-shadow: 0 0 8px rgba(255, 102, 0, 0.4);
+    font-size: 3rem;
+    color: #ff7c33;
+    margin-bottom: 1rem;
+    text-shadow: 2px 2px 6px rgba(0, 0, 0, 0.8);
 }
 
 .hero-content p {
-    font-size: clamp(1rem, 2vw, 1.3rem);
-    margin-bottom: 2.5rem;
-    color: #333;
+    font-size: 1.2rem;
+    margin-bottom: 2rem;
+    color: #ddd;
+    text-shadow: 1px 1px 4px rgba(0, 0, 0, 0.7);
 }
 
 .btn {
-    background: #ff6600;
+    background: #ff7c33;
     color: #fff;
-    padding: 0.85rem 2rem;
+    padding: 0.75rem 1.5rem;
     border: none;
     text-decoration: none;
-    font-weight: 700;
-    border-radius: 6px;
-    cursor: pointer;
-    box-shadow: 0 6px 12px rgba(255, 102, 0, 0.4);
-    transition: background 0.3s ease, box-shadow 0.3s ease, transform 0.2s ease;
-    display: inline-block;
+    font-weight: bold;
+    border-radius: 5px;
+    transition: background 0.3s, box-shadow 0.3s;
+    box-shadow: 0 2px 6px rgba(0, 0, 0, 0.1);
 }
 
-.btn:hover,
-.btn:focus-visible {
-    background: #e65c00;
-    box-shadow: 0 8px 20px rgba(230, 92, 0, 0.6);
-    transform: translateY(-2px);
-    outline: none;
-}
-
-.btn:active {
-    transform: translateY(1px);
-    box-shadow: 0 4px 10px rgba(230, 92, 0, 0.5);
+.btn:hover {
+    background: #e96b24;
 }
 
 /* --- Sections --- */
@@ -157,47 +135,41 @@ html {
 }
 
 .section h2 {
-    font-size: 2.25rem;
+    font-size: 2rem;
     margin-bottom: 1rem;
-    border-left: 6px solid #ff6600;
+    border-left: 6px solid #ff7c33;
     padding-left: 1rem;
-    color: #ff6600;
-    font-family: 'Rajdhani', sans-serif;
-    text-shadow: 0 0 5px rgba(255, 102, 0, 0.4);
+    color: #ff7c33;
+}
+
+.section:nth-child(even) {
+    background-color: #f7f7f7;
 }
 
 /* --- Team Grid --- */
 .team-grid {
     display: grid;
     grid-template-columns: repeat(auto-fit, minmax(180px, 1fr));
-    gap: 2.5rem;
+    gap: 2rem;
     margin-top: 2rem;
     text-align: center;
 }
 
 .member img {
-    width: 120px;
-    height: 120px;
-    object-fit: cover;
+    width: 40%; /* augmenté pour agrandir les photos */
     border-radius: 50%;
-    border: 3px solid #ff6600;
-    box-shadow: 0 0 14px rgba(255, 102, 0, 0.35);
-    transition: transform 0.3s ease;
-}
-
-.member img:hover {
-    transform: scale(1.1);
+    border: 3px solid #ff7c33;
+    box-shadow: 0 0 10px rgba(255, 102, 0, 0.2);
 }
 
 .member h3 {
     margin-top: 0.75rem;
-    font-size: 1.3rem;
-    color: #ff6600;
-    font-family: 'Rajdhani', sans-serif;
+    font-size: 1.2rem;
+    color: #ff7c33;
 }
 
 .member p {
-    font-size: 1rem;
+    font-size: 0.9rem;
     color: #555;
 }
 
@@ -208,45 +180,34 @@ html {
 }
 
 #projects li {
-    padding: 0.6rem 0;
-    font-size: 1.15rem;
-    color: #333;
-    border-left: 4px solid #ff6600;
-    padding-left: 1rem;
-    margin-bottom: 0.7rem;
-    transition: color 0.3s ease;
-}
-
-#projects li:hover {
-    color: #ff6600;
+    padding: 0.5rem 0;
+    font-size: 1.1rem;
 }
 
 /* --- Media Grid --- */
 .media-grid {
     display: grid;
     grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
-    gap: 1.2rem;
+    gap: 1rem;
     margin-top: 2rem;
 }
 
 .media-grid img {
     width: 100%;
-    border-radius: 12px;
-    border: 2px solid #ddd;
-    transition: transform 0.3s ease, border-color 0.3s ease;
-    box-shadow: 0 2px 8px rgba(0,0,0,0.05);
+    border-radius: 10px;
+    border: 2px solid #ccc;
+    transition: transform 0.3s ease, border-color 0.3s;
 }
 
 .media-grid img:hover {
     transform: scale(1.05);
-    border-color: #ff6600;
-    box-shadow: 0 4px 14px rgba(255, 102, 0, 0.3);
+    border-color: #ff7c33;
 }
 
 /* --- Contact --- */
 #contact a.btn {
     display: inline-block;
-    margin-top: 1.2rem;
+    margin-top: 1rem;
 }
 
 /* --- Footer --- */
@@ -257,19 +218,18 @@ footer {
     color: #666;
     font-size: 0.9rem;
     border-top: 1px solid #ddd;
-    user-select: none;
 }
 
-/* --- Social links section --- */
+/* --- Social Links --- */
 #socials {
     text-align: center;
-    padding: 50px 20px;
+    padding: 40px 20px;
 }
 
 .social-links {
     display: flex;
     justify-content: center;
-    gap: 35px;
+    gap: 30px;
     flex-wrap: wrap;
 }
 
@@ -277,58 +237,90 @@ footer {
     display: flex;
     flex-direction: column;
     align-items: center;
-    font-family: 'Rajdhani', sans-serif;
-    font-weight: 700;
-    color: #ff6600;
+    font-weight: 600;
+    color: #ff7c33;
     text-decoration: none;
-    transition: color 0.3s ease;
-    cursor: pointer;
-    width: 80px;
+    transition: all 0.3s;
 }
 
 .social-links a img {
-    width: 55px;
-    height: 55px;
-    margin-bottom: 6px;
-    transition: transform 0.3s ease, filter 0.3s ease;
-    filter: drop-shadow(0 0 3px rgba(255, 102, 0, 0.6));
+    width: 50px;
+    height: 50px;
+    margin-bottom: 5px;
+    transition: transform 0.3s;
 }
 
 .social-links a:hover {
-    color: #e65c00;
+    color: #222;
 }
 
 .social-links a:hover img {
-    transform: scale(1.15);
-    filter: drop-shadow(0 0 6px rgba(230, 92, 0, 0.9));
+    transform: scale(1.1);
+}
+#socials h2 {
+    border-left: none;
+    padding-left: 0; /* Pour enlever le padding aussi */
+}
+/* Encadrement orange arrondi pour la partie réseaux sociaux dans le header */
+.navbar .social-links {
+    border: 2px solid #ff7c33;
+    border-radius: 12px;
+    padding: 5px 15px;
+    transition: box-shadow 0.3s ease;
 }
 
-/* --- Responsive --- */
-@media (max-width: 768px) {
-    .navbar {
-        flex-direction: column;
-        padding: 1rem;
-    }
-    .nav-links {
-        gap: 1rem;
-        margin-top: 0.5rem;
-        flex-wrap: wrap;
-        justify-content: center;
-    }
-    .team-grid {
-        grid-template-columns: repeat(auto-fit, minmax(140px, 1fr));
-    }
-    .member img {
-        width: 100px;
-        height: 100px;
-    }
-    .hero-content h1 {
-        font-size: 2.2rem;
-    }
+.navbar .social-links:hover {
+    box-shadow: 0 0 10px #ff7c33;
 }
 
-/* Focus accessibility */
-a:focus-visible {
-    outline: 2px dashed #ff6600;
-    outline-offset: 3px;
+/* Encadrement orange arrondi pour la section projets */
+#projects {
+    border: 2px solid #ff7c33;
+    border-radius: 12px;
+    padding: 1.5rem 2rem;
+    transition: box-shadow 0.3s ease;
+}
+
+#projects:hover {
+    box-shadow: 0 0 12px #ff7c33;
+}
+#projects {
+    border: 2px solid #ff7c33;
+    border-radius: 12px;
+    padding: 1.5rem 2rem;
+    transition: box-shadow 0.3s ease;
+    background-color: transparent; /* <-- transparent */
+}
+
+#projects:hover {
+    box-shadow: 0 0 12px #ff7c33;
+}
+
+/* Encadrement orange arrondi pour la section réseaux en bas de page */
+#socials {
+    border: 2px solid #ff7c33;
+    border-radius: 12px;
+    padding: 1.5rem 2rem;
+    max-width: 1200px;
+    margin: 2rem auto;
+    transition: box-shadow 0.3s ease;
+    background-color: transparent; /* <-- transparent */
+}
+
+#socials:hover {
+    box-shadow: 0 0 12px #ff7c33;
+}
+
+.member img {
+    width: 35%;
+    border-radius: 50%;
+    border: 3px solid #ff7c33;
+    box-shadow: 0 0 10px rgba(255, 102, 0, 0.2);
+    transition: transform 0.3s ease, box-shadow 0.3s ease;
+}
+
+.member img:hover {
+    transform: scale(1.05);
+    box-shadow: 0 0 12px rgba(255, 124, 51, 0.4);
+    cursor: pointer;
 }
