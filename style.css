@@ -5,15 +5,15 @@
     box-sizing: border-box;
 }
 
+html {
+    scroll-behavior: smooth;
+}
+
 body {
     font-family: 'Rajdhani', 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
     background-color: #f0f0f0;
     color: #333;
     line-height: 1.6;
-}
-
-html {
-    scroll-behavior: smooth;
 }
 
 /* --- Navbar --- */
@@ -80,8 +80,8 @@ html {
 /* --- Hero Section --- */
 .hero {
     background:
-            linear-gradient(rgba(0, 0, 0, 0.55), rgba(0, 0, 0, 0.55)),
-            url('assets/wallpaperkeyboardorange.jpg') center/cover no-repeat;
+        linear-gradient(rgba(0, 0, 0, 0.55), rgba(0, 0, 0, 0.55)),
+        url('assets/wallpaperkeyboardorange.jpg') center/cover no-repeat;
     height: 100vh;
     display: flex;
     justify-content: center;
@@ -156,10 +156,17 @@ html {
 }
 
 .member img {
-    width: 40%; /* augmenté pour agrandir les photos */
+    width: 35%;
     border-radius: 50%;
     border: 3px solid #ff7c33;
     box-shadow: 0 0 10px rgba(255, 102, 0, 0.2);
+    transition: transform 0.3s ease, box-shadow 0.3s ease;
+}
+
+.member img:hover {
+    transform: scale(1.05);
+    box-shadow: 0 0 12px rgba(255, 124, 51, 0.4);
+    cursor: pointer;
 }
 
 .member h3 {
@@ -174,6 +181,18 @@ html {
 }
 
 /* --- Projects --- */
+#projects {
+    border: 2px solid #ff7c33;
+    border-radius: 12px;
+    padding: 1.5rem 2rem;
+    background-color: transparent;
+    transition: box-shadow 0.3s ease;
+}
+
+#projects:hover {
+    box-shadow: 0 0 12px #ff7c33;
+}
+
 #projects ul {
     list-style: none;
     padding-left: 1rem;
@@ -222,8 +241,18 @@ footer {
 
 /* --- Social Links --- */
 #socials {
+    border: 2px solid #ff7c33;
+    border-radius: 12px;
+    padding: 1.5rem 2rem;
+    max-width: 1200px;
+    margin: 2rem auto;
+    background-color: transparent;
+    transition: box-shadow 0.3s ease;
     text-align: center;
-    padding: 40px 20px;
+}
+
+#socials:hover {
+    box-shadow: 0 0 12px #ff7c33;
 }
 
 .social-links {
@@ -257,10 +286,12 @@ footer {
 .social-links a:hover img {
     transform: scale(1.1);
 }
+
 #socials h2 {
     border-left: none;
-    padding-left: 0; /* Pour enlever le padding aussi */
+    padding-left: 0;
 }
+
 /* Encadrement orange arrondi pour la partie réseaux sociaux dans le header */
 .navbar .social-links {
     border: 2px solid #ff7c33;
@@ -271,56 +302,4 @@ footer {
 
 .navbar .social-links:hover {
     box-shadow: 0 0 10px #ff7c33;
-}
-
-/* Encadrement orange arrondi pour la section projets */
-#projects {
-    border: 2px solid #ff7c33;
-    border-radius: 12px;
-    padding: 1.5rem 2rem;
-    transition: box-shadow 0.3s ease;
-}
-
-#projects:hover {
-    box-shadow: 0 0 12px #ff7c33;
-}
-#projects {
-    border: 2px solid #ff7c33;
-    border-radius: 12px;
-    padding: 1.5rem 2rem;
-    transition: box-shadow 0.3s ease;
-    background-color: transparent; /* <-- transparent */
-}
-
-#projects:hover {
-    box-shadow: 0 0 12px #ff7c33;
-}
-
-/* Encadrement orange arrondi pour la section réseaux en bas de page */
-#socials {
-    border: 2px solid #ff7c33;
-    border-radius: 12px;
-    padding: 1.5rem 2rem;
-    max-width: 1200px;
-    margin: 2rem auto;
-    transition: box-shadow 0.3s ease;
-    background-color: transparent; /* <-- transparent */
-}
-
-#socials:hover {
-    box-shadow: 0 0 12px #ff7c33;
-}
-
-.member img {
-    width: 35%;
-    border-radius: 50%;
-    border: 3px solid #ff7c33;
-    box-shadow: 0 0 10px rgba(255, 102, 0, 0.2);
-    transition: transform 0.3s ease, box-shadow 0.3s ease;
-}
-
-.member img:hover {
-    transform: scale(1.05);
-    box-shadow: 0 0 12px rgba(255, 124, 51, 0.4);
-    cursor: pointer;
 }
