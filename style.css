@@ -150,14 +150,13 @@ body {
 .team-grid {
     display: grid;
     grid-template-columns: repeat(auto-fit, minmax(180px, 1fr));
-    gap: 40px;
+    gap: 2rem;
     margin-top: 2rem;
     text-align: center;
 }
 
 .member img {
-    width: 120px;
-    height: auto;
+    width: 35%;
     border-radius: 50%;
     border: 3px solid #ff7c33;
     box-shadow: 0 0 10px rgba(255, 102, 0, 0.2);
@@ -204,23 +203,19 @@ body {
     font-size: 1.1rem;
 }
 
-/* --- Media Grid (recommendations) --- */
+/* --- Media Grid --- */
 .media-grid {
     display: grid;
-    grid-template-columns: repeat(auto-fit, minmax(140px, 1fr));
-    gap: 40px; /* même espacement partout */
+    grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+    gap: 1rem;
     margin-top: 2rem;
-    align-items: start;
-    text-align: center;
 }
 
 .media-grid img {
-    width: 120px !important; /* taille uniforme plus petite */
-    height: auto !important;
+    width: 100%;
     border-radius: 10px;
     border: 2px solid #ccc;
     transition: transform 0.3s ease, border-color 0.3s;
-    margin: 0 auto;
 }
 
 .media-grid img:hover {
@@ -297,7 +292,6 @@ footer {
     padding-left: 0;
 }
 
-/* --- Navbar socials encadrement --- */
 .navbar .social-links {
     border: 2px solid #ff7c33;
     border-radius: 12px;
@@ -307,4 +301,29 @@ footer {
 
 .navbar .social-links:hover {
     box-shadow: 0 0 10px #ff7c33;
+}
+.product-grid img {
+    max-width: 150px;
+    height: auto;
+    border-radius: 8px;
+    transition: transform 0.3s ease;
+}
+
+.product-grid img:hover {
+    transform: scale(1.05);
+}
+
+
+.product-group {
+    margin-bottom: 5rem;
+}
+
+.product-group h3 {
+    margin-bottom: 2rem;
+}
+
+.product-grid {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(200px, 1fr));
+    gap: 3rem;
 }
