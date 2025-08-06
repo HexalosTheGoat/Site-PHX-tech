@@ -80,8 +80,8 @@ body {
 /* --- Hero Section --- */
 .hero {
     background:
-        linear-gradient(rgba(0, 0, 0, 0.55), rgba(0, 0, 0, 0.55)),
-        url('assets/wallpaperkeyboardorange.jpg') center/cover no-repeat;
+            linear-gradient(rgba(0, 0, 0, 0.55), rgba(0, 0, 0, 0.55)),
+            url('assets/wallpaperkeyboardorange.jpg') center/cover no-repeat;
     height: 100vh;
     display: flex;
     justify-content: center;
@@ -292,7 +292,6 @@ footer {
     padding-left: 0;
 }
 
-/* Encadrement orange arrondi pour la partie réseaux sociaux dans le header */
 .navbar .social-links {
     border: 2px solid #ff7c33;
     border-radius: 12px;
@@ -302,4 +301,29 @@ footer {
 
 .navbar .social-links:hover {
     box-shadow: 0 0 10px #ff7c33;
+}
+.product-grid img {
+    max-width: 150px;
+    height: auto;
+    border-radius: 8px;
+    transition: transform 0.3s ease;
+}
+
+.product-grid img:hover {
+    transform: scale(1.05);
+}
+
+
+.product-group {
+    margin-bottom: 5rem;
+}
+
+.product-group h3 {
+    margin-bottom: 2rem;
+}
+
+.product-grid {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(200px, 1fr));
+    gap: 3rem;
 }
