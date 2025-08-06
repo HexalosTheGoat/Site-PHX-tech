@@ -322,8 +322,12 @@ footer {
     margin-bottom: 2rem;
 }
 
-.product-grid {
-    display: grid;
-    grid-template-columns: repeat(auto-fit, minmax(200px, 1fr));
-    gap: 3rem;
+.product-grid img {
+    width: 80%; /* réduit la taille */
+    max-width: 160px; /* limite la largeur maximale */
+    height: auto;
+    display: block;
+    margin: 0 auto; /* centre l'image dans sa colonne */
 }
+
+
